@@ -1091,9 +1091,6 @@ svg * {
 }
 
 @media (max-width: 1024px) {
-  .services__category-list {
-    grid-template-columns: repeat(3, 1fr);
-  }
   .about__dog-link {
     max-width: 100px;
     max-height: 100px;
@@ -1348,6 +1345,10 @@ svg * {
 
   .food {
     margin-top: 50px;
+
+    &__product-image{
+      width: 85%;
+    }
   }
 
   .socials {
