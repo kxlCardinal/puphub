@@ -615,13 +615,15 @@ svg * {
   }
 
   &__image {
-    max-width: 590px;
-    max-height: 424px;
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
     position: relative;
   }
 
   &__dog {
-    min-width: 350px;
+    max-width: 450px;
   }
 
   &__dog-link {
@@ -785,7 +787,7 @@ svg * {
   }
 
   &__image-box {
-    max-width: 539px;
+    max-width: 450px;
     min-width: 350px;
     height: auto;
     padding-left: 15px;
@@ -1124,6 +1126,7 @@ svg * {
 }
 
 @media (max-width: 768px) {
+
   .about {
 
     &__content {
@@ -1270,7 +1273,7 @@ svg * {
     align-items: center;
   }
   .hero__image {
-    max-width: 75%;
+    max-width: 450px;
   }
   .services__category-list {
     justify-content: center;
@@ -1299,8 +1302,19 @@ svg * {
 }
 
 @media (max-width: 515px) {
-  .about__dog-link {
-    top: 90px;
+
+  .about {
+
+    &__dog {
+      max-width: 90%;
+      height: auto;
+    }
+
+    &__dog-link {
+      top: 90px;
+    }
+
+
   }
   .input-wrapper {
     max-width: 400px;
@@ -1346,7 +1360,7 @@ svg * {
   .food {
     margin-top: 50px;
 
-    &__product-image{
+    &__product-image {
       width: 85%;
     }
   }
