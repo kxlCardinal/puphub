@@ -249,6 +249,7 @@ svg * {
   }
 }
 
+
 :root {
   --header-height: 50px;
   --ff-main: 'Roboto', sans-serif;
@@ -307,68 +308,67 @@ svg * {
 
 .header {
   padding-top: 40px;
-  padding-inline: 15px;
-}
 
-.header__logo,
-.header__actions {
-  flex-shrink: 0;
-}
+  &__logo,
+  &__actions {
+    flex-shrink: 0;
+  }
 
-.header__inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  min-height: var(--header-height);
-  padding-inline: 50px;
-}
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: var(--header-height);
+    padding-inline: 50px;
+  }
 
-.header__menu-list {
-  display: flex;
-  column-gap: 57px;
-}
+  &__menu-list {
+    display: flex;
+    column-gap: 57px;
+  }
 
-.header__menu-link {
-  display: inline-flex;
-  align-items: center;
-  height: var(--header-height);
-  font-family: var(--ff-strong);
-  font-weight: 700;
-  font-size: 15px;
-  text-decoration: none;
-  text-transform: uppercase;
-  color: #000;
-}
+  &__menu-link {
+    display: inline-flex;
+    align-items: center;
+    height: var(--header-height);
+    font-family: var(--ff-strong);
+    font-weight: 700;
+    font-size: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #000;
+  }
 
-.header__actions {
-  display: flex;
-  column-gap: 15px;
-}
+  &__actions {
+    display: flex;
+    column-gap: 15px;
+  }
 
-.header__actions-btn {
-  display: flex;
-  font-family: var(--ff-strong);
-  justify-content: center;
-  align-items: center;
-  font-weight: 700;
-  font-size: 16px;
-  border-color: transparent;
-}
+  &__actions-btn {
+    display: flex;
+    font-family: var(--ff-strong);
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 16px;
+    border-color: transparent;
+  }
 
-.header__actions-btn:first-child {
-  color: #fff;
-  background: #124c5f;
-}
+  &__actions-btn:first-child {
+    color: #fff;
+    background: #124c5f;
+  }
 
-.header__actions-btn:last-child {
-  color: #124c5f;
-  background: #c7e7e1;
+  &__actions-btn:last-child {
+    color: #124c5f;
+    background: #c7e7e1;
+  }
+
 }
 
 .hero {
   position: relative;
   padding-top: 100px;
-  padding-inline: 15px;
 
   &::before {
     content: '';
@@ -443,18 +443,13 @@ svg * {
   &__image {
     height: auto;
     width: 100%;
-    min-width: 450px;
+    min-width: 350px;
   }
 }
 
 .services {
   margin-top: 100px;
-  padding-inline: 15px;
   margin-bottom: 40px;
-
-  &__inner {
-    padding-inline: 15px;
-  }
 
   &__title {
     font-family: var(--ff-accent);
@@ -478,9 +473,11 @@ svg * {
   }
 
   &__category-list {
-    display: grid;
+    display: flex;
     grid-template-columns: repeat(5, 1fr);
     gap: 15px;
+    justify-content: space-between;
+    align-items: center;
   }
 
   &__list-item {
@@ -489,6 +486,7 @@ svg * {
     align-items: center;
     justify-content: center;
     gap: 32px;
+    flex-shrink: 0;
   }
 
   &__list-item__icon-wrapper {
@@ -552,7 +550,6 @@ svg * {
     justify-content: space-between;
     align-items: center;
     position: relative;
-    padding-inline: 15px;
   }
 
   &__content::before {
@@ -619,13 +616,12 @@ svg * {
 
   &__image {
     max-width: 590px;
-    padding-right: 20px;
     max-height: 424px;
     position: relative;
   }
 
   &__dog {
-    min-width: 450px;
+    min-width: 350px;
   }
 
   &__dog-link {
@@ -1077,9 +1073,6 @@ svg * {
 
 @media (max-width: 1200px) {
   .header {
-    &__inner {
-      padding-inline: 10px;
-    }
 
     &__menu-list {
       column-gap: 15px;
@@ -1090,6 +1083,10 @@ svg * {
     max-height: 130px;
     top: 70px;
     right: 70px;
+  }
+
+  .services__category-list {
+    flex-wrap: wrap;
   }
 }
 
@@ -1251,7 +1248,7 @@ svg * {
 
     }
 
-    &__copyright{
+    &__copyright {
       text-align: center;
 
     }
@@ -1275,11 +1272,12 @@ svg * {
     justify-content: center;
     align-items: center;
   }
-  hero__image {
+  .hero__image {
     max-width: 75%;
   }
   .services__category-list {
-    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
   }
   .about__title {
     font-size: 28px;
@@ -1346,6 +1344,10 @@ svg * {
   .about__content {
     align-items: center;
     justify-content: center;
+  }
+
+  .food {
+    margin-top: 50px;
   }
 
   .socials {
